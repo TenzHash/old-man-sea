@@ -1,16 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Analysis from "./Analysis";
-import StoryMode from "./StoryMode"; // Import the new component
+import StoryMode from "./StoryMode";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/analysis" element={<Analysis />} />
-        <Route path="/story" element={<StoryMode />} />
-      </Routes>
-    </BrowserRouter>
+    // BrowserRouter removed from here
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/analysis" element={<Analysis />} />
+      <Route path="/story" element={<StoryMode />} />
+    </Routes>
   );
 }
